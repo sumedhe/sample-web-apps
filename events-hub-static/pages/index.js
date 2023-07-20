@@ -5,6 +5,26 @@ import oidcConfig from '../oidcConfig';
 const HomePage = () => {
   const [user, setUser] = useState(null);
 
+  const [config, setConfig] = useState(null);
+
+  useEffect(() => {
+    const fetchConfig = async () => {
+      try {
+        const response = await fetch('/config.json');
+        if (response.ok) {
+          const data = await response.json();
+          setConfig(data);
+        } else {
+          throw new Error('Failed to fetch config data.');
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchConfig();
+  }, []);
+
   useEffect(() => {
     const userManager = new UserManager(oidcConfig);
 
@@ -25,7 +45,7 @@ const HomePage = () => {
   }, []);
 
   const handleLogin = () => {
-    const userManager = new UserManager(oidcConfig);
+    const userManager = new UserManager({ ...config });
     userManager.signinRedirect();
   };
 
