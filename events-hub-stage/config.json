@@ -1,0 +1,9 @@
+{
+  "authority": "https://api.asg.io/t/sume.stage/oauth2/token",
+  "client_id": "0q6gk3F9fyL9OATnKW3Cfu61MOYa",
+  "redirect_uri": "https://eventshub-stage.choreoapps.dev",
+  "response_type": "code",
+  "scope": "openid profile email",
+  "post_logout_redirect_uri": "https://eventshub-stage.choreoapps.dev",
+  "silent_redirect_uri": "https://eventshub-stage.choreoapps.dev"
+}
