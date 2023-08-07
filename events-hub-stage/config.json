@@ -1,6 +1,6 @@
 {
-  "authority": "https://api.asg.io/t/sume.stage/oauth2/token",
-  "client_id": "0q6gk3F9fyL9OATnKW3Cfu61MOYa",
+  "authority": "https://api.asg.io/t/sume2.stage/oauth2/token",
+  "client_id": "fEEOPs3i2L8UK8mOTn5WZALrJfca",
   "redirect_uri": "https://eventshub-stage.choreoapps.dev",
   "response_type": "code",
   "scope": "openid profile email",
